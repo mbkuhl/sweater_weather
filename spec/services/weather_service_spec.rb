@@ -28,6 +28,7 @@ RSpec.describe 'API call' do
 
     expect(data).to have_key(:daily_weather)
     expect(data[:daily_weather]).to be_a(Array)
+    expect(data[:daily_weather].count).to eq(5)
     data[:daily_weather].each do |day|
       expect(day).to be_a(Hash)
       expect(day.keys.count).to eq(7)
@@ -49,6 +50,7 @@ RSpec.describe 'API call' do
 
     expect(data).to have_key(:hourly_weather)
     expect(data[:hourly_weather]).to be_a(Array)
+    expect(data[:hourly_weather].count).to eq(24)
     data[:hourly_weather].each do |hour|
       expect(hour).to be_a(Hash)
       expect(hour.keys.count).to eq(4)
