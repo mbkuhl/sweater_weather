@@ -10,6 +10,7 @@ RSpec.describe Munchies do
     expect(munchies).to be_a Munchies
 
     expect(munchies.destination_city).to eq("Houston, TX")
+    expect(munchies.id).to be nil
     expect(munchies.forecast).to be_a Hash
     expect(munchies.forecast.keys).to eq([:temperature, :condition])
     expect(munchies.forecast[:temperature]).to be_a Float
