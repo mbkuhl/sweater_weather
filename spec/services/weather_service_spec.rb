@@ -64,4 +64,14 @@ RSpec.describe 'API call' do
       expect(hour[:icon]).to be_a String
     end
   end
+
+  it 'gets a forecast object with less data for a location given as city,st', :vcr do
+    forecast = WeatherService.get_forecast_for_munchies(29.76078, 95.36952)
+
+    expect(forecast).to be_a Hash
+    expect(forecast.keys).to eq([:temperature, :condition])
+    expect(forecast[:temperature]).to be_a Float
+    expect(forecast[:condition]).to be_a String
+    
+  end
 end
