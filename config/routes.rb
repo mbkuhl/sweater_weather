@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   get "api/v0/forecast", to: "api/v0/forecast#show"
   
-  get "api/v0/munchies", to: "api/v0/munchies#show"
+  get "api/v1/munchies", to: "api/v1/munchies#show"
 end

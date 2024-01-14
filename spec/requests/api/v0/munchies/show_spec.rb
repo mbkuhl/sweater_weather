@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe "Munchies Show" do
   it "Get request for munchies show", :vcr do
     get "/api/v1/munchies?destination=pueblo,co&food=italian"
-
     expect(response).to be_successful
     
     json_response = JSON.parse(response.body, symbolize_names: true)
