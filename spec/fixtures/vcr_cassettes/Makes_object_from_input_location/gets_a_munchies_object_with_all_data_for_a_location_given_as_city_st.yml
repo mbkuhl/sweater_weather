@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 14 Jan 2024 21:00:06 GMT
+      - Sun, 14 Jan 2024 21:00:07 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,17 +29,17 @@ http_interactions:
       X-Ratelimit-Limit-2628000:
       - '1000000000'
       X-Ratelimit-Remaining-2628000:
-      - '999999956'
+      - '999999955'
       Ratelimit-Limit:
       - '1000000000'
       Ratelimit-Remaining:
-      - '999999956'
+      - '999999955'
       Ratelimit-Reset:
-      - '305994'
+      - '305993'
       X-Powered-By:
       - MapQuest
       X-Request-Id:
-      - e53a37e0-b31f-11ee-9392-cdc181db240d
+      - e5b5f790-b31f-11ee-b75e-59a1c9563f30
       Access-Control-Allow-Origin:
       - "*"
       Etag:
@@ -48,7 +48,283 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyNCBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDI0IE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJob3VzdG9uLHR4In0sImxvY2F0aW9ucyI6W3sic3RyZWV0IjoiIiwiYWRtaW5BcmVhNiI6IiIsImFkbWluQXJlYTZUeXBlIjoiTmVpZ2hib3Job29kIiwiYWRtaW5BcmVhNSI6IkhvdXN0b24iLCJhZG1pbkFyZWE1VHlwZSI6IkNpdHkiLCJhZG1pbkFyZWE0IjoiSGFycmlzIiwiYWRtaW5BcmVhNFR5cGUiOiJDb3VudHkiLCJhZG1pbkFyZWEzIjoiVFgiLCJhZG1pbkFyZWEzVHlwZSI6IlN0YXRlIiwiYWRtaW5BcmVhMSI6IlVTIiwiYWRtaW5BcmVhMVR5cGUiOiJDb3VudHJ5IiwicG9zdGFsQ29kZSI6IiIsImdlb2NvZGVRdWFsaXR5Q29kZSI6IkE1WEFYIiwiZ2VvY29kZVF1YWxpdHkiOiJDSVRZIiwiZHJhZ1BvaW50IjpmYWxzZSwic2lkZU9mU3RyZWV0IjoiTiIsImxpbmtJZCI6IjAiLCJ1bmtub3duSW5wdXQiOiIiLCJ0eXBlIjoicyIsImxhdExuZyI6eyJsYXQiOjI5Ljc2MDc4LCJsbmciOi05NS4zNjk1Mn0sImRpc3BsYXlMYXRMbmciOnsibGF0IjoyOS43NjA3OCwibG5nIjotOTUuMzY5NTJ9LCJtYXBVcmwiOiIifV19XX0=
-  recorded_at: Sun, 14 Jan 2024 21:00:06 GMT
+  recorded_at: Sun, 14 Jan 2024 21:00:07 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?latitude=29.76078&longitude=-95.36952&term=italian
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer Ij5JAHR0ADVbkcdfSq04In6Ak61zKrxZ8bxWwsS093evmJ_PTwzGwiSa4IOdW7jBvXGj7uIqz8MlbwtwHFUQjdBmw8mnMUZX2LREqCcoSh4tvIR3smz0AZW8d0GkZXYx
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Zipkin-Id:
+      - da5e1c9657dc309f
+      Ratelimit-Dailylimit:
+      - '500.0'
+      X-Routing-Service:
+      - routing-main--useast1-74f644dc4b-6krqw; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Remaining:
+      - '495.0'
+      Server:
+      - envoy
+      Ratelimit-Resettime:
+      - '2024-01-15T00:00:00+00:00'
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-65-127-198-useast1aprod
+      X-Extlb:
+      - 10-65-127-198-useast1aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 14 Jan 2024 21:00:08 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8280-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "McwaN30rgpfIpyDPT913Vw", "alias": "fabios-artisan-pasta-houston",
+        "name": "Fabio''s Artisan Pasta", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Um6Q53757AE4K3xrceAzRw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/fabios-artisan-pasta-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 325, "categories": [{"alias": "pastashops", "title": "Pasta
+        Shops"}], "rating": 5.0, "coordinates": {"latitude": 29.73823, "longitude":
+        -95.41208}, "transactions": [], "price": "$$", "location": {"address1": "2129
+        W Alabama St", "address2": "", "address3": "", "city": "Houston", "zip_code":
+        "77098", "country": "US", "state": "TX", "display_address": ["2129 W Alabama
+        St", "Houston, TX 77098"]}, "phone": "+17135281329", "display_phone": "(713)
+        528-1329", "distance": 4815.763321015511}, {"id": "d6cm5ns_Hfy83-e3nm3CSg",
+        "alias": "rivas-italian-restaurant-houston", "name": "Riva''s Italian Restaurant",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/BsQ3Et_iQm4_k-QObvrHWQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/rivas-italian-restaurant-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 783, "categories": [{"alias": "italian", "title": "Italian"}],
+        "rating": 4.0, "coordinates": {"latitude": 29.74605, "longitude": -95.39248},
+        "transactions": ["pickup"], "price": "$$", "location": {"address1": "1117
+        Missouri St", "address2": "", "address3": "", "city": "Houston", "zip_code":
+        "77006", "country": "US", "state": "TX", "display_address": ["1117 Missouri
+        St", "Houston, TX 77006"]}, "phone": "+17135293450", "display_phone": "(713)
+        529-3450", "distance": 2762.903769948477}, {"id": "3HegUGlMWewihoGeBIWDrQ",
+        "alias": "figo-sugo-houston", "name": "Figo Sugo", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/sYf9L5Pm4WRLcrdawldrsQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/figo-sugo-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 14, "categories": [{"alias": "pizza", "title": "Pizza"}, {"alias":
+        "italian", "title": "Italian"}], "rating": 4.5, "coordinates": {"latitude":
+        29.761498029768212, "longitude": -95.3622655570507}, "transactions": [], "location":
+        {"address1": "409 Travis St", "address2": "", "address3": null, "city": "Houston",
+        "zip_code": "77002", "country": "US", "state": "TX", "display_address": ["409
+        Travis St", "Houston, TX 77002"]}, "phone": "+18322246095", "display_phone":
+        "(832) 224-6095", "distance": 704.7971669957923}, {"id": "x4WealiPVG-tzwzhe7nvpw",
+        "alias": "north-italia-houston", "name": "North Italia", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/jNVzNb0v96ized80X-nBbQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/north-italia-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 2325, "categories": [{"alias": "pizza", "title": "Pizza"},
+        {"alias": "italian", "title": "Italian"}, {"alias": "cocktailbars", "title":
+        "Cocktail Bars"}], "rating": 4.5, "coordinates": {"latitude": 29.7485868638914,
+        "longitude": -95.4620253208921}, "transactions": ["delivery"], "price": "$$",
+        "location": {"address1": "1700 Post Oak Blvd", "address2": "Ste 190", "address3":
+        "", "city": "Houston", "zip_code": "77056", "country": "US", "state": "TX",
+        "display_address": ["1700 Post Oak Blvd", "Ste 190", "Houston, TX 77056"]},
+        "phone": "+12816054030", "display_phone": "(281) 605-4030", "distance": 9032.31014999497},
+        {"id": "xRfw_M1BdMpnEzMcFCY_7g", "alias": "perbacco-houston", "name": "Perbacco",
+        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/5MQXQJUWyqxFT363_hxAaA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/perbacco-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 211, "categories": [{"alias": "italian", "title": "Italian"}],
+        "rating": 4.0, "coordinates": {"latitude": 29.760168, "longitude": -95.365059},
+        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "700 Milam St", "address2": "", "address3": "", "city": "Houston", "zip_code":
+        "77002", "country": "US", "state": "TX", "display_address": ["700 Milam St",
+        "Houston, TX 77002"]}, "phone": "+17132242422", "display_phone": "(713) 224-2422",
+        "distance": 435.9603316173463}, {"id": "8ZhYOX0zREv0Px2aBqnLNg", "alias":
+        "mia-bella-trattoria-houston-14", "name": "Mia Bella Trattoria", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/5zfaWJIZBJsaOFhqZ6xb3Q/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/mia-bella-trattoria-houston-14?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 683, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias": "cocktailbars",
+        "title": "Cocktail Bars"}], "rating": 4.5, "coordinates": {"latitude": 29.7324270623784,
+        "longitude": -95.4372201}, "transactions": ["delivery", "pickup"], "price":
+        "$$", "location": {"address1": "3773 Richmond Ave", "address2": "Ste 1A",
+        "address3": null, "city": "Houston", "zip_code": "77046", "country": "US",
+        "state": "TX", "display_address": ["3773 Richmond Ave", "Ste 1A", "Houston,
+        TX 77046"]}, "phone": "+17133937340", "display_phone": "(713) 393-7340", "distance":
+        7256.57992223715}, {"id": "z0sbzv4MRstpyodVBjCLLA", "alias": "coltivare-houston",
+        "name": "Coltivare", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/aYx9U75S2s71cgoKqv97AQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/coltivare-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 1196, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "newamerican", "title": "New American"}], "rating": 4.0, "coordinates":
+        {"latitude": 29.7817, "longitude": -95.39371}, "transactions": ["delivery"],
+        "price": "$$", "location": {"address1": "3320 White Oak Dr", "address2": "",
+        "address3": "", "city": "Houston", "zip_code": "77007", "country": "US", "state":
+        "TX", "display_address": ["3320 White Oak Dr", "Houston, TX 77007"]}, "phone":
+        "+17136374095", "display_phone": "(713) 637-4095", "distance": 3295.8186148907803},
+        {"id": "RQACBE17RBjDMF2sVdn9cw", "alias": "the-gypsy-poet-houston-4", "name":
+        "The Gypsy Poet", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/910GPTw6TtVH8WwZ5kx9aQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/the-gypsy-poet-houston-4?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 610, "categories": [{"alias": "pizza", "title": "Pizza"},
+        {"alias": "beerbar", "title": "Beer Bar"}, {"alias": "wine_bars", "title":
+        "Wine Bars"}], "rating": 4.5, "coordinates": {"latitude": 29.74416, "longitude":
+        -95.37029}, "transactions": ["delivery", "pickup"], "price": "$$", "location":
+        {"address1": "2404 Austin St", "address2": "", "address3": null, "city": "Houston",
+        "zip_code": "77004", "country": "US", "state": "TX", "display_address": ["2404
+        Austin St", "Houston, TX 77004"]}, "phone": "+12818888663", "display_phone":
+        "(281) 888-8663", "distance": 1851.4836394336562}, {"id": "9aCrr5WIgdyciBAtrAu7fw",
+        "alias": "rosalie-italian-soul-houston-3", "name": "Rosalie Italian Soul",
+        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/_Nnv-7scy3PfTT-ImzCgeQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/rosalie-italian-soul-houston-3?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 231, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "pizza", "title": "Pizza"}, {"alias": "breakfast_brunch", "title":
+        "Breakfast & Brunch"}], "rating": 3.5, "coordinates": {"latitude": 29.75810256856403,
+        "longitude": -95.37095358831716}, "transactions": [], "price": "$$$", "location":
+        {"address1": "400 Dallas St", "address2": "", "address3": "C. Baldwin Hotel",
+        "city": "Houston", "zip_code": "77002", "country": "US", "state": "TX", "display_address":
+        ["400 Dallas St", "C. Baldwin Hotel", "Houston, TX 77002"]}, "phone": "+17133515790",
+        "display_phone": "(713) 351-5790", "distance": 328.3067796815962}, {"id":
+        "MXLhzFh9WK0ig3MYt5THDA", "alias": "grotto-downtown-houston", "name": "Grotto
+        Downtown", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Isv3obVVKiY8VJ9sc6ms5w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/grotto-downtown-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 530, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "wine_bars", "title": "Wine Bars"}, {"alias": "tapasmallplates",
+        "title": "Tapas/Small Plates"}], "rating": 4.0, "coordinates": {"latitude":
+        29.75415973428185, "longitude": -95.35692803334328}, "transactions": ["delivery",
+        "pickup"], "price": "$$", "location": {"address1": "1001 Avenida De Las Americas",
+        "address2": "Ste A", "address3": null, "city": "Houston", "zip_code": "77010",
+        "country": "US", "state": "TX", "display_address": ["1001 Avenida De Las Americas",
+        "Ste A", "Houston, TX 77010"]}, "phone": "+17136580752", "display_phone":
+        "(713) 658-0752", "distance": 1421.0589528847825}, {"id": "XPdL-df73m-sYrTndOrb3Q",
+        "alias": "osso-and-kristalla-houston-2", "name": "Osso & Kristalla", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/3s6-tBOJh2Gn5QsZJHh4ZA/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/osso-and-kristalla-houston-2?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 458, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "bars", "title": "Bars"}, {"alias": "pizza", "title": "Pizza"}],
+        "rating": 4.0, "coordinates": {"latitude": 29.7574509, "longitude": -95.3579026},
+        "transactions": ["delivery"], "price": "$$", "location": {"address1": "1515
+        Texas Ave", "address2": "", "address3": null, "city": "Houston", "zip_code":
+        "77002", "country": "US", "state": "TX", "display_address": ["1515 Texas Ave",
+        "Houston, TX 77002"]}, "phone": "+17132216666", "display_phone": "(713) 221-6666",
+        "distance": 1180.9500338530304}, {"id": "yTnMkgBS19T90hxWOEOy4A", "alias":
+        "potente-houston", "name": "Potente", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/rbM1g58URlgREkuKuA_RJQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/potente-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 438, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "seafood", "title": "Seafood"}], "rating": 4.5, "coordinates": {"latitude":
+        29.7572378866031, "longitude": -95.3574474900742}, "transactions": ["delivery"],
+        "price": "$$$", "location": {"address1": "1515 Texas Ave", "address2": null,
+        "address3": "", "city": "Houston", "zip_code": "77002", "country": "US", "state":
+        "TX", "display_address": ["1515 Texas Ave", "Houston, TX 77002"]}, "phone":
+        "+17132371515", "display_phone": "(713) 237-1515", "distance": 1230.1245594493082},
+        {"id": "dXKTbmDLPTFobS5zndLh7w", "alias": "marmo-houston", "name": "Marmo",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/228zXJD6W8Wg2GPknHRyVQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/marmo-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 477, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "steak", "title": "Steakhouses"}, {"alias": "pianobars", "title":
+        "Piano Bars"}], "rating": 4.0, "coordinates": {"latitude": 29.744848346265503,
+        "longitude": -95.3903673860217}, "transactions": [], "price": "$$$", "location":
+        {"address1": "888 Westheimer Rd", "address2": "Ste 109", "address3": "", "city":
+        "Houston", "zip_code": "77006", "country": "US", "state": "TX", "display_address":
+        ["888 Westheimer Rd", "Ste 109", "Houston, TX 77006"]}, "phone": "+18326263400",
+        "display_phone": "(832) 626-3400", "distance": 2681.149649734234}, {"id":
+        "cRSfgxEnTwNwWr80w-mJlw", "alias": "mastrantos-houston-3", "name": "Mastrantos",
+        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/CdS79yVMlGUInhJNoULezw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/mastrantos-houston-3?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 237, "categories": [{"alias": "pastashops", "title": "Pasta
+        Shops"}, {"alias": "wine_bars", "title": "Wine Bars"}, {"alias": "italian",
+        "title": "Italian"}], "rating": 4.0, "coordinates": {"latitude": 29.788228,
+        "longitude": -95.388072}, "transactions": ["delivery", "pickup"], "price":
+        "$$", "location": {"address1": "927 Studewood St", "address2": "Ste 100",
+        "address3": null, "city": "Houston", "zip_code": "77008", "country": "US",
+        "state": "TX", "display_address": ["927 Studewood St", "Ste 100", "Houston,
+        TX 77008"]}, "phone": "+13462278458", "display_phone": "(346) 227-8458", "distance":
+        3538.538767889698}, {"id": "2mSa1wCbonFQJ6rDHAgUwQ", "alias": "birraporettis-houston",
+        "name": "Birraporetti''s", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/OWxyel2lYEwpy3cdP1DL5g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/birraporettis-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 533, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "pizza", "title": "Pizza"}], "rating": 3.0, "coordinates": {"latitude":
+        29.76224, "longitude": -95.36491}, "transactions": ["delivery", "pickup"],
+        "price": "$$", "location": {"address1": "500 Louisiana St", "address2": "",
+        "address3": "", "city": "Houston", "zip_code": "77002", "country": "US", "state":
+        "TX", "display_address": ["500 Louisiana St", "Houston, TX 77002"]}, "phone":
+        "+17132249494", "display_phone": "(713) 224-9494", "distance": 472.81132821167705},
+        {"id": "klNukwjIL3hkpgwXKoH3Zw", "alias": "tiny-champions-houston", "name":
+        "Tiny Champions", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/JvqaPVGq8wuBSeritoVh0A/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tiny-champions-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 283, "categories": [{"alias": "pizza", "title": "Pizza"},
+        {"alias": "italian", "title": "Italian"}], "rating": 4.5, "coordinates": {"latitude":
+        29.74847, "longitude": -95.35051}, "transactions": ["delivery"], "price":
+        "$$", "location": {"address1": "2617 McKinney St", "address2": "", "address3":
+        null, "city": "Houston", "zip_code": "77003", "country": "US", "state": "TX",
+        "display_address": ["2617 McKinney St", "Houston, TX 77003"]}, "phone": "+17134855329",
+        "display_phone": "(713) 485-5329", "distance": 2289.3931069384635}, {"id":
+        "I1VlZBW80UL3E3NvahlqXg", "alias": "oporto-fooding-house-and-wine-houston",
+        "name": "Oporto Fooding House & Wine", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/H4-BOMnv6Rn7RUoSa3_GBw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/oporto-fooding-house-and-wine-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 1503, "categories": [{"alias": "tapasmallplates", "title":
+        "Tapas/Small Plates"}, {"alias": "portuguese", "title": "Portuguese"}, {"alias":
+        "wine_bars", "title": "Wine Bars"}], "rating": 4.5, "coordinates": {"latitude":
+        29.7531663748913, "longitude": -95.38029690072668}, "transactions": ["delivery",
+        "pickup"], "price": "$$", "location": {"address1": "125 W Gray St", "address2":
+        "Ste 500", "address3": "", "city": "Houston", "zip_code": "77019", "country":
+        "US", "state": "TX", "display_address": ["125 W Gray St", "Ste 500", "Houston,
+        TX 77019"]}, "phone": "+17135280115", "display_phone": "(713) 528-0115", "distance":
+        1341.2649670587996}, {"id": "3YYrFCwHsM5POb-HI5FSXg", "alias": "lombardi-cucina-italiana-houston-2",
+        "name": "Lombardi Cucina Italiana", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/yOnF1OQnHEiesARSoaVRDQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/lombardi-cucina-italiana-houston-2?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 37, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias": "cocktailbars",
+        "title": "Cocktail Bars"}], "rating": 3.5, "coordinates": {"latitude": 29.756642810801488,
+        "longitude": -95.45753957435244}, "transactions": [], "location": {"address1":
+        "1101 Uptown Park Blvd", "address2": "Ste 18", "address3": null, "city": "Houston",
+        "zip_code": "77056", "country": "US", "state": "TX", "display_address": ["1101
+        Uptown Park Blvd", "Ste 18", "Houston, TX 77056"]}, "phone": "+18327401885",
+        "display_phone": "(832) 740-1885", "distance": 8509.045017296497}, {"id":
+        "qyUdnuraXGKHTwhFjkRsbA", "alias": "davanti-ristorante-houston", "name": "Davanti
+        Ristorante", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/aEJUt0IU4ZCZk_-NFKJVgw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/davanti-ristorante-houston?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 74, "categories": [{"alias": "italian", "title": "Italian"}],
+        "rating": 4.5, "coordinates": {"latitude": 29.739362602590592, "longitude":
+        -95.44192140245316}, "transactions": ["delivery", "pickup"], "location": {"address1":
+        "2900 Weslayan St", "address2": "", "address3": null, "city": "Houston", "zip_code":
+        "77027", "country": "US", "state": "TX", "display_address": ["2900 Weslayan
+        St", "Houston, TX 77027"]}, "phone": "+12818882201", "display_phone": "(281)
+        888-2201", "distance": 7384.146491012819}, {"id": "OYiE24uzI_YKGuchV8xo0Q",
+        "alias": "piola-houston-7", "name": "Piola", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/xnFkK7BJ0hw1YVcHxQLEyw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/piola-houston-7?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
+        "review_count": 691, "categories": [{"alias": "pizza", "title": "Pizza"},
+        {"alias": "italian", "title": "Italian"}], "rating": 4.0, "coordinates": {"latitude":
+        29.74287233551, "longitude": -95.3798845184326}, "transactions": ["delivery",
+        "pickup"], "price": "$$", "location": {"address1": "3201 Louisiana St", "address2":
+        "Ste 103", "address3": "", "city": "Houston", "zip_code": "77006", "country":
+        "US", "state": "TX", "display_address": ["3201 Louisiana St", "Ste 103", "Houston,
+        TX 77006"]}, "phone": "+17135248222", "display_phone": "(713) 524-8222", "distance":
+        2228.488743897322}], "total": 490, "region": {"center": {"longitude": -95.36952,
+        "latitude": 29.76078}}}'
+  recorded_at: Sun, 14 Jan 2024 21:00:08 GMT
 - request:
     method: get
     uri: http://api.weatherapi.com/v1/forecast.json?days=5&key=<WEATHER_API_KEY>&q=29.76078,-95.36952
@@ -68,7 +344,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 14 Jan 2024 21:00:07 GMT
+      - Sun, 14 Jan 2024 21:00:08 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -108,9 +384,9 @@ http_interactions:
       Cdn-Status:
       - '200'
       Cdn-Requestid:
-      - 55860026644837715c224716b403adab
+      - 18ac913979eb229acfa66c13af3b252a
       Cdn-Cache:
-      - EXPIRED
+      - HIT
     body:
       encoding: ASCII-8BIT
       string: '{"location":{"name":"Houston","region":"Texas","country":"United States
@@ -274,5 +550,5 @@ http_interactions:
         cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png","code":1003},"wind_mph":8.9,"wind_kph":14.4,"wind_degree":309,"wind_dir":"NW","pressure_mb":1016.0,"pressure_in":29.99,"precip_mm":0.0,"precip_in":0.0,"snow_cm":0.0,"humidity":68,"cloud":13,"feelslike_c":13.8,"feelslike_f":56.9,"windchill_c":13.8,"windchill_f":56.9,"heatindex_c":14.8,"heatindex_f":58.6,"dewpoint_c":8.8,"dewpoint_f":47.8,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":14.8,"gust_kph":23.8,"uv":1.0},{"time_epoch":1705636800,"time":"2024-01-18
         22:00","temp_c":14.1,"temp_f":57.3,"is_day":0,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png","code":1000},"wind_mph":11.4,"wind_kph":18.4,"wind_degree":341,"wind_dir":"NNW","pressure_mb":1017.0,"pressure_in":30.02,"precip_mm":0.0,"precip_in":0.0,"snow_cm":0.0,"humidity":59,"cloud":0,"feelslike_c":12.8,"feelslike_f":55.1,"windchill_c":12.8,"windchill_f":55.1,"heatindex_c":14.1,"heatindex_f":57.3,"dewpoint_c":6.5,"dewpoint_f":43.6,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":17.9,"gust_kph":28.8,"uv":1.0},{"time_epoch":1705640400,"time":"2024-01-18
         23:00","temp_c":13.2,"temp_f":55.7,"is_day":0,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png","code":1000},"wind_mph":11.0,"wind_kph":17.6,"wind_degree":343,"wind_dir":"NNW","pressure_mb":1017.0,"pressure_in":30.03,"precip_mm":0.0,"precip_in":0.0,"snow_cm":0.0,"humidity":58,"cloud":0,"feelslike_c":11.7,"feelslike_f":53.1,"windchill_c":11.7,"windchill_f":53.1,"heatindex_c":13.2,"heatindex_f":55.7,"dewpoint_c":5.3,"dewpoint_f":41.5,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":17.0,"gust_kph":27.4,"uv":1.0}]}]}}'
-  recorded_at: Sun, 14 Jan 2024 21:00:07 GMT
+  recorded_at: Sun, 14 Jan 2024 21:00:08 GMT
 recorded_with: VCR 6.2.0

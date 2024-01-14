@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Dailylimit:
-      - '500.0'
-      X-Zipkin-Id:
-      - 933264a221337225
       Server:
       - envoy
+      Ratelimit-Dailylimit:
+      - '500.0'
       Ratelimit-Remaining:
-      - '497.0'
-      X-B3-Sampled:
-      - '0'
-      X-Routing-Service:
-      - routing-main--useast1-74f644dc4b-g4jnn; site=public_api_v3
+      - '494.0'
+      X-Zipkin-Id:
+      - d52adca80e6c411d
       Ratelimit-Resettime:
       - '2024-01-15T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--useast1-74f644dc4b-nc5t2; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-79-132-useast1aprod
+      - 10-65-92-52-useast1aprod
       X-Extlb:
-      - 10-65-79-132-useast1aprod
+      - 10-65-92-52-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 14 Jan 2024 20:38:15 GMT
+      - Sun, 14 Jan 2024 21:00:11 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8253-DEN
+      - cache-den8227-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -71,8 +71,8 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/molinari-delicatessen-san-francisco?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
         "review_count": 1361, "categories": [{"alias": "gourmet", "title": "Specialty
         Food"}, {"alias": "delis", "title": "Delis"}], "rating": 4.5, "coordinates":
-        {"latitude": 37.79838, "longitude": -122.40782}, "transactions": ["delivery",
-        "pickup"], "price": "$$", "location": {"address1": "373 Columbus Ave", "address2":
+        {"latitude": 37.79838, "longitude": -122.40782}, "transactions": ["pickup",
+        "delivery"], "price": "$$", "location": {"address1": "373 Columbus Ave", "address2":
         "", "address3": "", "city": "San Francisco", "zip_code": "94133", "country":
         "US", "state": "CA", "display_address": ["373 Columbus Ave", "San Francisco,
         CA 94133"]}, "phone": "+14154212337", "display_phone": "(415) 421-2337", "distance":
@@ -103,7 +103,7 @@ http_interactions:
         "review_count": 1712, "categories": [{"alias": "sandwiches", "title": "Sandwiches"},
         {"alias": "delis", "title": "Delis"}, {"alias": "beer_and_wine", "title":
         "Beer, Wine & Spirits"}], "rating": 5.0, "coordinates": {"latitude": 37.7873184067081,
-        "longitude": -122.423591369312}, "transactions": ["delivery", "pickup"], "price":
+        "longitude": -122.423591369312}, "transactions": ["pickup", "delivery"], "price":
         "$$", "location": {"address1": "1400 Sutter St", "address2": "", "address3":
         null, "city": "San Francisco", "zip_code": "94109", "country": "US", "state":
         "CA", "display_address": ["1400 Sutter St", "San Francisco, CA 94109"]}, "phone":
@@ -114,7 +114,7 @@ http_interactions:
         "review_count": 130, "categories": [{"alias": "delis", "title": "Delis"},
         {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "italian", "title":
         "Italian"}], "rating": 4.5, "coordinates": {"latitude": 37.79894, "longitude":
-        -122.4086}, "transactions": ["delivery", "pickup"], "price": "$$", "location":
+        -122.4086}, "transactions": ["pickup", "delivery"], "price": "$$", "location":
         {"address1": "658 Vallejo St", "address2": null, "address3": "", "city": "San
         Francisco", "zip_code": "94133", "country": "US", "state": "CA", "display_address":
         ["658 Vallejo St", "San Francisco, CA 94133"]}, "phone": "+14159370161", "display_phone":
@@ -125,7 +125,7 @@ http_interactions:
         "review_count": 421, "categories": [{"alias": "delis", "title": "Delis"},
         {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "breakfast_brunch",
         "title": "Breakfast & Brunch"}], "rating": 4.5, "coordinates": {"latitude":
-        37.7971806, "longitude": -122.421842}, "transactions": ["delivery", "pickup"],
+        37.7971806, "longitude": -122.421842}, "transactions": ["pickup", "delivery"],
         "price": "$$", "location": {"address1": "2222 Polk St", "address2": "", "address3":
         "Polk & Green Produce Market", "city": "San Francisco", "zip_code": "94109",
         "country": "US", "state": "CA", "display_address": ["2222 Polk St", "Polk
@@ -137,7 +137,7 @@ http_interactions:
         "review_count": 450, "categories": [{"alias": "delis", "title": "Delis"},
         {"alias": "cafes", "title": "Cafes"}, {"alias": "sandwiches", "title": "Sandwiches"}],
         "rating": 4.5, "coordinates": {"latitude": 37.79385, "longitude": -122.40482},
-        "transactions": ["delivery", "pickup"], "price": "$", "location": {"address1":
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
         "621 Kearny St", "address2": null, "address3": "", "city": "San Francisco",
         "zip_code": "94108", "country": "US", "state": "CA", "display_address": ["621
         Kearny St", "San Francisco, CA 94108"]}, "phone": "+14157812328", "display_phone":
@@ -147,7 +147,7 @@ http_interactions:
         "review_count": 868, "categories": [{"alias": "italian", "title": "Italian"},
         {"alias": "gelato", "title": "Gelato"}, {"alias": "sandwiches", "title": "Sandwiches"}],
         "rating": 4.5, "coordinates": {"latitude": 37.799643, "longitude": -122.409622},
-        "transactions": ["delivery", "pickup"], "price": "$", "location": {"address1":
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
         "507 Columbus Ave", "address2": null, "address3": "", "city": "San Francisco",
         "zip_code": "94133", "country": "US", "state": "CA", "display_address": ["507
         Columbus Ave", "San Francisco, CA 94133"]}, "phone": "+14152969463", "display_phone":
@@ -158,7 +158,7 @@ http_interactions:
         "review_count": 354, "categories": [{"alias": "grocery", "title": "Grocery"},
         {"alias": "organic_stores", "title": "Organic Stores"}, {"alias": "delis",
         "title": "Delis"}], "rating": 4.5, "coordinates": {"latitude": 37.7928314208984,
-        "longitude": -122.416275024414}, "transactions": ["delivery", "pickup"], "price":
+        "longitude": -122.416275024414}, "transactions": ["pickup", "delivery"], "price":
         "$$", "location": {"address1": "1263 Leavenworth St", "address2": "", "address3":
         "", "city": "San Francisco", "zip_code": "94109", "country": "US", "state":
         "CA", "display_address": ["1263 Leavenworth St", "San Francisco, CA 94109"]},
@@ -169,7 +169,7 @@ http_interactions:
         "review_count": 32, "categories": [{"alias": "beer_and_wine", "title": "Beer,
         Wine & Spirits"}, {"alias": "delis", "title": "Delis"}], "rating": 4.0, "coordinates":
         {"latitude": 37.7839431994157, "longitude": -122.405098485531}, "transactions":
-        ["delivery", "pickup"], "price": "$", "location": {"address1": "810 Mission
+        ["pickup", "delivery"], "price": "$", "location": {"address1": "810 Mission
         St", "address2": "", "address3": "", "city": "San Francisco", "zip_code":
         "94103", "country": "US", "state": "CA", "display_address": ["810 Mission
         St", "San Francisco, CA 94103"]}, "phone": "+14155127847", "display_phone":
@@ -179,8 +179,8 @@ http_interactions:
         false, "url": "https://www.yelp.com/biz/sutter-st-cafe-san-francisco?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
         "review_count": 249, "categories": [{"alias": "cafes", "title": "Cafes"},
         {"alias": "delis", "title": "Delis"}], "rating": 4.5, "coordinates": {"latitude":
-        37.7894760577176, "longitude": -122.407699611023}, "transactions": ["delivery",
-        "pickup"], "price": "$", "location": {"address1": "450 Sutter St", "address2":
+        37.7894760577176, "longitude": -122.407699611023}, "transactions": ["pickup",
+        "delivery"], "price": "$", "location": {"address1": "450 Sutter St", "address2":
         null, "address3": "", "city": "San Francisco", "zip_code": "94108", "country":
         "US", "state": "CA", "display_address": ["450 Sutter St", "San Francisco,
         CA 94108"]}, "phone": "+14153628342", "display_phone": "(415) 362-8342", "distance":
@@ -199,7 +199,7 @@ http_interactions:
         "review_count": 213, "categories": [{"alias": "delis", "title": "Delis"},
         {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "salad", "title":
         "Salad"}], "rating": 4.5, "coordinates": {"latitude": 37.784358, "longitude":
-        -122.395457}, "transactions": ["delivery", "pickup"], "price": "$$", "location":
+        -122.395457}, "transactions": ["pickup", "delivery"], "price": "$$", "location":
         {"address1": "600 Harrison St", "address2": "", "address3": "Eden Plaza Cafe",
         "city": "San Francisco", "zip_code": "94107", "country": "US", "state": "CA",
         "display_address": ["600 Harrison St", "Eden Plaza Cafe", "San Francisco,
@@ -220,7 +220,7 @@ http_interactions:
         "review_count": 815, "categories": [{"alias": "delis", "title": "Delis"},
         {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "cheese", "title":
         "Cheese Shops"}], "rating": 4.0, "coordinates": {"latitude": 37.80065, "longitude":
-        -122.43836}, "transactions": ["delivery", "pickup"], "price": "$$", "location":
+        -122.43836}, "transactions": ["pickup", "delivery"], "price": "$$", "location":
         {"address1": "2120 Chestnut St", "address2": "", "address3": "", "city": "San
         Francisco", "zip_code": "94123", "country": "US", "state": "CA", "display_address":
         ["2120 Chestnut St", "San Francisco, CA 94123"]}, "phone": "+14159217873",
@@ -231,7 +231,7 @@ http_interactions:
         "review_count": 79, "categories": [{"alias": "delis", "title": "Delis"}, {"alias":
         "sandwiches", "title": "Sandwiches"}, {"alias": "breakfast_brunch", "title":
         "Breakfast & Brunch"}], "rating": 4.5, "coordinates": {"latitude": 37.7951292693615,
-        "longitude": -122.396138906479}, "transactions": ["delivery", "pickup"], "price":
+        "longitude": -122.396138906479}, "transactions": ["pickup", "delivery"], "price":
         "$", "location": {"address1": "4 Embarcadero Ctr", "address2": "", "address3":
         "", "city": "San Francisco", "zip_code": "94111", "country": "US", "state":
         "CA", "display_address": ["4 Embarcadero Ctr", "San Francisco, CA 94111"]},
@@ -261,7 +261,7 @@ http_interactions:
         false, "url": "https://www.yelp.com/biz/il-porcellino-grasso-san-francisco?adjust_creative=4w80E_gfbssAKMWYHaqPgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4w80E_gfbssAKMWYHaqPgw",
         "review_count": 27, "categories": [{"alias": "italian", "title": "Italian"}],
         "rating": 4.5, "coordinates": {"latitude": 37.7936, "longitude": -122.39917},
-        "transactions": ["delivery", "pickup"], "location": {"address1": "214 California
+        "transactions": ["pickup", "delivery"], "location": {"address1": "214 California
         St", "address2": "", "address3": null, "city": "San Francisco", "zip_code":
         "94111", "country": "US", "state": "CA", "display_address": ["214 California
         St", "San Francisco, CA 94111"]}, "phone": "", "display_phone": "", "distance":
@@ -271,11 +271,11 @@ http_interactions:
         "review_count": 852, "categories": [{"alias": "delis", "title": "Delis"},
         {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "salad", "title":
         "Salad"}], "rating": 4.0, "coordinates": {"latitude": 37.7884239641, "longitude":
-        -122.415666133}, "transactions": ["delivery", "pickup"], "price": "$$", "location":
+        -122.415666133}, "transactions": ["pickup", "delivery"], "price": "$$", "location":
         {"address1": "912 Sutter St", "address2": "", "address3": "", "city": "San
         Francisco", "zip_code": "94104", "country": "US", "state": "CA", "display_address":
         ["912 Sutter St", "San Francisco, CA 94104"]}, "phone": "+14155632483", "display_phone":
         "(415) 563-2483", "distance": 1389.7519934105944}], "total": 803, "region":
         {"center": {"longitude": -122.399972, "latitude": 37.786882}}}'
-  recorded_at: Sun, 14 Jan 2024 20:38:15 GMT
+  recorded_at: Sun, 14 Jan 2024 21:00:11 GMT
 recorded_with: VCR 6.2.0
