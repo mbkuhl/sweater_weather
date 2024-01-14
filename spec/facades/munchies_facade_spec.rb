@@ -4,7 +4,7 @@ RSpec.describe 'Makes object from input location' do
   it 'gets a munchies object with  all data for a location given as city,st', :vcr do
     munchies = MunchiesFacade.get_munchies("houston,tx", "italian")
 
-    expect(munchies).to be_a Munchies
+    expect(munchies).to be_a Munchie
 
     expect(munchies.destination_city).to eq("Houston, TX")
     expect(munchies.id).to be nil

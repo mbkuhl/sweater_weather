@@ -1,4 +1,4 @@
-class MunchiesSerializer
+class MunchieSerializer
   include JSONAPI::Serializer
 
   attributes  :destination_city,

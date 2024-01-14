@@ -1,4 +1,4 @@
-class Munchies
+class Munchie
   attr_reader :restaurant,
               :forecast,
               :destination_city,

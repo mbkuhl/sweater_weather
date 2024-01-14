@@ -10,7 +10,7 @@ RSpec.describe "Munchies Show" do
     expect(json_response).to be_a Hash
     expect(json_response[:data]).to be_a Hash
     expect(json_response[:data][:id]).to be nil
-    expect(json_response[:data][:type]).to eq("munchies")
+    expect(json_response[:data][:type]).to eq("munchie")
     data = json_response[:data][:attributes]
     expect(data).to be_a Hash
 

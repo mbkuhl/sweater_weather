@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe Munchies do
+RSpec.describe Munchie do
   it 'object has all attributes if given proper data', :vcr do
     coordinates_hash = MapquestService.get_lat_lon("houston,tx")
     restaurant_data = YelpService.get_restaurant("italian", coordinates_hash[:lat], coordinates_hash[:lng])
     forecast_data = WeatherService.get_forecast_for_munchies(coordinates_hash[:lat], coordinates_hash[:lng])
-    munchies = Munchies.new(restaurant_data, forecast_data, "houston,tx")
+    munchies = Munchie.new(restaurant_data, forecast_data, "houston,tx")
 
-    expect(munchies).to be_a Munchies
+    expect(munchies).to be_a Munchie
 
     expect(munchies.destination_city).to eq("Houston, TX")
     expect(munchies.id).to be nil
