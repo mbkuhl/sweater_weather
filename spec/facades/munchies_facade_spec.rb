@@ -6,7 +6,7 @@ RSpec.describe 'Makes object from input location' do
 
     expect(munchies).to be_a Munchies
 
-    expect(munchies.location).to eq("Houston, TX")
+    expect(munchies.destination_city).to eq("Houston, TX")
     expect(munchies.forecast).to be_a Hash
     expect(munchies.forecast.keys).to eq([:temperature, :condition])
     expect(munchies.forecast[:temperature]).to be_a Float
