@@ -14,5 +14,17 @@ RSpec.describe "Munchies Show" do
     data = json_response[:data][:attributes]
     expect(data).to be_a Hash
 
+    expect(data.keys.count).to eq(3)
+    expect(data).to have_key(:destination_city)
+    expect(data[:destination_city]).to be_a(String)
+    expect(data[:destination_city]).to eq("Pueblo, CO")
+
+    expect(data).to have_key(:forecast)
+    expect(data[:forecast]).to be_a(Hash)
+    expect(data[:forecast].keys).to eq([:temperature, :summary])
+
+    expect(data).to have_key(:restaurant)
+    expect(data[:restaurant]).to be_a(Hash)
+    expect(data[:restaurant].keys).to eq([:name, :address, :rating, :reviews])
   end
 end

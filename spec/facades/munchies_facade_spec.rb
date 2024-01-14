@@ -9,9 +9,9 @@ RSpec.describe 'Makes object from input location' do
     expect(munchies.destination_city).to eq("Houston, TX")
     expect(munchies.id).to be nil
     expect(munchies.forecast).to be_a Hash
-    expect(munchies.forecast.keys).to eq([:temperature, :condition])
+    expect(munchies.forecast.keys).to eq([:temperature, :summary])
     expect(munchies.forecast[:temperature]).to be_a Float
-    expect(munchies.forecast[:condition]).to be_a String
+    expect(munchies.forecast[:summary]).to be_a String
     expect(munchies.restaurant).to be_a Hash
     expect(munchies.restaurant.keys).to eq([:name, :address, :rating, :reviews])
     expect(munchies.restaurant[:name]).to be_a String

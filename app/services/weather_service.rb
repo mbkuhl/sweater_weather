@@ -20,7 +20,7 @@ class WeatherService
     current = full_hash[:current]
     clean_hash = {
         temperature: current[:temp_f],
-        condition: current[:condition][:text],
+        summary: current[:condition][:text],
       }
   end
 

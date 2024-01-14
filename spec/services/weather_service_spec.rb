@@ -69,9 +69,9 @@ RSpec.describe 'API call' do
     forecast = WeatherService.get_forecast_for_munchies(29.76078, 95.36952)
 
     expect(forecast).to be_a Hash
-    expect(forecast.keys).to eq([:temperature, :condition])
+    expect(forecast.keys).to eq([:temperature, :summary])
     expect(forecast[:temperature]).to be_a Float
-    expect(forecast[:condition]).to be_a String
+    expect(forecast[:summary]).to be_a String
     
   end
 end
