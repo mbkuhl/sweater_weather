@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get "api/v0/forecast", to: "api/v0/forecast#show"
+  
+  get "api/v0/munchies", to: "api/v0/munchies#show"
 end
