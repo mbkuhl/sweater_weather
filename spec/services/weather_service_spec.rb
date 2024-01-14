@@ -70,7 +70,7 @@ RSpec.describe 'API call' do
 
     expect(forecast).to be_a Hash
     expect(forecast.keys).to eq([:temperature, :summary])
-    expect(forecast[:temperature]).to be_a Float
+    expect(forecast[:temperature]).to be_a String
     expect(forecast[:summary]).to be_a String
     
   end

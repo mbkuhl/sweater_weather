@@ -19,7 +19,7 @@ class WeatherService
   def self.munchies_forecast_cleaner(full_hash)
     current = full_hash[:current]
     clean_hash = {
-        temperature: current[:temp_f],
+        temperature: current[:temp_f].to_s.split(".")[0],
         summary: current[:condition][:text],
       }
   end
