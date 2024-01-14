@@ -40,7 +40,7 @@ class WeatherService
       end,
       hourly_weather: hours.map do |hour|
         {
-          time: hour[:time].split(" ")[2],
+          time: hour[:time].split(" ")[1],
           temperature: hour[:temp_f],
           conditions: hour[:condition][:text],
           icon: hour[:condition][:icon]
