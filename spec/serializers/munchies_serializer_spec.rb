@@ -3,19 +3,19 @@ require 'rails_helper'
 RSpec.describe MunchieSerializer do
   it 'can make a json style hash given a munchies object', :vcr do
     munchies = MunchiesFacade.get_munchies("houston,tx", "italian")
-    munchies_json_hash = MunchieSerializer.new(munchies)
+    munchies_json_hash = MunchieSerializer.new(munchies).to_hash
 
     expect(munchies_json_hash).to be_a Hash
     expect(munchies_json_hash[:data]).to be_a Hash
     expect(munchies_json_hash[:data][:id]).to be nil
-    expect(munchies_json_hash[:data][:type]).to eq("munchies")
+    expect(munchies_json_hash[:data][:type]).to eq(:munchie)
     data = munchies_json_hash[:data][:attributes]
     expect(data).to be_a Hash
 
     expect(data.keys.count).to eq(3)
     expect(data).to have_key(:destination_city)
     expect(data[:destination_city]).to be_a(String)
-    expect(data[:destination_city]).to eq("Pueblo, CO")
+    expect(data[:destination_city]).to eq("Houston, TX")
 
     expect(data).to have_key(:forecast)
     expect(data[:forecast]).to be_a(Hash)
