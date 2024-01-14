@@ -1,19 +1,16 @@
 class WeatherService
 
-  def conn
+  def self.conn
     Faraday.new(url: "http://api.weatherapi.com/v1/")
   end
 
-  def get_details(lat, lon, date)
-    response = conn.get("history.json?key=#{Rails.application.credentials.weather_api[:key]}&q=#{lat},#{lon}&dt=#{date}")
+  def self.get_forecast(lat, lon)
+    response = conn.get("forecast.json?key=#{Rails.application.credentials.weather_api[:key]}&q=#{lat},#{lon}&days=5")
     hash = JSON.parse(response.body, symbolize_names: true)
-    if hash[:error]
-      hash.to_json
-    else
-      { 
-        location: hash[:location],
-        weather_data: hash[:forecast][:forecastday].first[:day]
-      }.to_json
-    end
+    forecast_cleaner(hash)
+  end
+
+  def self.forecast_cleaner(full_hash)
+    full_hash
   end
 end
