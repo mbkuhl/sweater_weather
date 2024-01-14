@@ -10,6 +10,20 @@ class WeatherService
     forecast_cleaner(hash)
   end
 
+  def self.get_forecast_for_munchies(lat, lon)
+    response = conn.get("forecast.json?key=#{Rails.application.credentials.weather_api[:key]}&q=#{lat},#{lon}&days=5")
+    hash = JSON.parse(response.body, symbolize_names: true)
+    munchies_forecast_cleaner(hash)
+  end
+
+  def self.munchies_forecast_cleaner(full_hash)
+    current = full_hash[:current]
+    clean_hash = {
+        temperature: current[:temp_f],
+        condition: current[:condition][:text],
+      }
+  end
+
   def self.forecast_cleaner(full_hash)
     current = full_hash[:current]
     days = full_hash[:forecast][:forecastday]
