@@ -4,10 +4,10 @@ class MapquestService
     Faraday.new(url: "https://www.mapquestapi.com/geocoding/v1/")
   end
 
-  def self.get_location(lat, lon)
-    response = conn.get("address?key=#{Rails.application.credentials.mapquest_api[:key]}&location=#{lat},#{lon}")
-    hash = JSON.parse(response.body, symbolize_names: true)
-  end
+  # def self.get_location(lat, lon)
+  #   response = conn.get("address?key=#{Rails.application.credentials.mapquest_api[:key]}&location=#{lat},#{lon}")
+  #   hash = JSON.parse(response.body, symbolize_names: true)
+  # end
 
   def self.get_lat_lon(location)
     response = conn.get("address?key=#{Rails.application.credentials.mapquest_api[:key]}&location=#{location}")
