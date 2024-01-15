@@ -28,7 +28,7 @@ RSpec.describe "Users Create" do
     expect(attributes[:api_key].length).to eq(22)
   end
 
-  it "Post request for users create" do
+  it "Post request for users create sad path duplicate email" do
     new_user = {
       "email": "whatever@example.com",
       "password": "password",
@@ -45,6 +45,23 @@ RSpec.describe "Users Create" do
     expect(errors).to be_a Array
     expect(errors.first).to be_a Hash
     expect(errors.first[:detail]).to eq("Validation failed: Email has already been taken")
+  end
 
+  it "Post request for users create sad path non-matching passwords" do
+    new_user = {
+      "email": "whatever@example.com",
+      "password": "password1",
+      "password_confirmation": "password"
+    }
+
+    post "/api/v0/users", params: new_user.to_json, headers: { 'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json' }
+    expect(response).to_not be_successful
+    expect(response.status).to eq(422)
+
+    json_response = JSON.parse(response.body, symbolize_names: true)
+    errors = json_response[:errors]
+    expect(errors).to be_a Array
+    expect(errors.first).to be_a Hash
+    expect(errors.first[:detail]).to eq("Validation failed: Password confirmation doesn't match Password")
   end
 end
