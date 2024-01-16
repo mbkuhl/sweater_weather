@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe "Sessions Create" do
-  it "Post request for sessions create" do
+
+  before :each do
     new_user = {
       "email": "whatever@example.com",
       "password": "password",
@@ -10,6 +11,9 @@ RSpec.describe "Sessions Create" do
 
     post "/api/v0/users", params: new_user.to_json, headers: { 'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json' }
     
+  end
+
+  it "Post request for sessions create" do
     new_session = {
       "email": "whatever@example.com",
       "password": "password"
@@ -20,7 +24,53 @@ RSpec.describe "Sessions Create" do
     expect(response.status).to eq(200)
 
     json_response = JSON.parse(response.body, symbolize_names: true)
+    
     data = json_response[:data]
+
     expect(data).to be_a Hash
+    expect(data.keys.count).to eq(3)
+    expect(data[:id].to_i).to_not eq(0)
+    expect(data[:type]).to eq("user")
+    attributes = data[:attributes]
+    expect(attributes).to be_a Hash
+
+    expect(attributes.keys.count).to eq(2)
+    expect(attributes[:email]).to be_a String
+    expect(attributes[:api_key]).to be_a String
+    expect(attributes[:api_key].length).to eq(22)
+  end
+
+  it "Post request for users create sad path wrong password" do
+    new_session = {
+      "email": "whatever@example.com",
+      "password": "password1"
+    }
+
+    post "/api/v0/sessions", params: new_session.to_json, headers: { 'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json' }
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+
+    json_response = JSON.parse(response.body, symbolize_names: true)
+    errors = json_response[:errors]
+    expect(errors).to be_a Array
+    expect(errors.first).to be_a Hash
+    expect(errors.first[:detail]).to eq("Email and/or password are incorrect")
+  end
+
+  it "Post request for users create sad path wrong email" do
+    new_session = {
+      "email": "whatever1@example.com",
+      "password": "password"
+    }
+
+    post "/api/v0/sessions", params: new_session.to_json, headers: { 'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json' }
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+
+    json_response = JSON.parse(response.body, symbolize_names: true)
+    errors = json_response[:errors]
+    expect(errors).to be_a Array
+    expect(errors.first).to be_a Hash
+    expect(errors.first[:detail]).to eq("Email and/or password are incorrect")
   end
 end
