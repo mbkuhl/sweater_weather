@@ -31,7 +31,11 @@ RSpec.describe 'API call' do
     expect(travel_time[:sec]).to be_a String
     expect(travel_time).to have_key(:day)
     expect(travel_time[:day]).to be nil
+  end
 
+  it 'returns error given a non drivable route', :vcr do
+    travel_time = MapquestService.get_travel_time("cincinatti,oh", "london,uk")
 
+    expect(travel_time).to eq({:routeError=>{:errorCode=>2, :message=>""}})
   end
 end
