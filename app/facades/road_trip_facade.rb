@@ -1,8 +1,8 @@
 class RoadTripFacade
 
   def self.get_road_trip(origin, destination)
-    coordinates_hash = MapquestService.get_lat_lon(destination)
-    travel_time = MapquestService.get_travel_time(origin, destination)
+    coordinates_hash = MapquestService.get_lat_lon(destination.gsub(" ", ""))
+    travel_time = MapquestService.get_travel_time(origin.gsub(" ", ""), destination.gsub(" ", ""))
     if travel_time[:routeError]
       travel_time[:formatted_time] = "impossible" 
       weather_data = {}
