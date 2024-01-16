@@ -10,6 +10,12 @@ class WeatherService
     forecast_cleaner(hash)
   end
 
+  def self.get_weather_at_eta(lat, lon, eta)
+    response = conn.get("forecast.json?key=#{Rails.application.credentials.weather_api[:key]}&q=#{lat},#{lon}&days=5")
+    hash = JSON.parse(response.body, symbolize_names: true)
+    forecast_cleaner(hash)
+  end
+
   def self.forecast_cleaner(full_hash)
     current = full_hash[:current]
     days = full_hash[:forecast][:forecastday]

@@ -15,4 +15,10 @@ class MapquestService
     hash[:results].first[:locations].first[:latLng]
   end 
 
+  def self.get_travel_data(origin, destination)
+    response = conn.get("address?key=#{Rails.application.credentials.mapquest_api[:key]}&location=#{destination}")
+    hash = JSON.parse(response.body, symbolize_names: true)
+    hash[:results].first[:locations].first[:latLng]
+  end 
+
 end
