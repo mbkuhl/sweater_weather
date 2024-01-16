@@ -8,6 +8,7 @@ RSpec.describe 'Makes object from input location' do
 
     expect(roadtrip.start_city).to eq("Cincinatti, OH")
     expect(roadtrip.end_city).to eq("Chicago, IL")
+    expect(roadtrip.id).to be nil
     expect(roadtrip.travel_time).to be_a String
     expect(roadtrip.weather_at_eta).to be_a Hash
     expect(roadtrip.weather_at_eta.keys.count).to eq(3)
