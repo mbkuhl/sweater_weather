@@ -17,6 +17,7 @@ class MapquestService
   def self.get_travel_time(origin, destination)
     response = dir_conn.get("route?key=#{Rails.application.credentials.mapquest_api[:key]}&from=#{origin}&to=#{destination}")
     time = JSON.parse(response.body, symbolize_names: true)[:route]
+    return time if time[:routeError]
     split_time = time[:formattedTime].split(":")
     { 
       formatted_time: time[:formattedTime],

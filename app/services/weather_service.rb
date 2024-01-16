@@ -11,7 +11,7 @@ class WeatherService
   end
 
   def self.get_weather_at_eta(lat, lon, eta)
-    response = conn.get("forecast.json?key=#{Rails.application.credentials.weather_api[:key]}&q=#{lat},#{lon}&days=5")
+    response = conn.get("forecast.json?key=#{Rails.application.credentials.weather_api[:key]}&q=#{lat},#{lon}&days=7")
     hash = JSON.parse(response.body, symbolize_names: true)[:forecast][:forecastday]
     weather_at_eta_cleaner(hash, eta)
   end
