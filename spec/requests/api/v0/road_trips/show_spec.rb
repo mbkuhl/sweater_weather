@@ -29,18 +29,18 @@ RSpec.describe "Forecast Show" do
     expect(json_response[:data]).to be_a Hash
     expect(json_response[:data][:id]).to be nil
     expect(json_response[:data][:type]).to eq("road_trip")
+
     data = json_response[:data][:attributes]
     expect(data).to be_a Hash
     expect(data.keys.count).to eq(4)
 
     expect(data[:start_city]).to eq("Cincinatti, OH")
-    expect(data[:end_city]).to eq("Cincinatti, OH")
-    expect(data[:end_city]).to eq("Cincinatti, OH")
+    expect(data[:end_city]).to eq("Chicago, IL")
     expect(data[:travel_time]).to be_a String
     expect(data[:weather_at_eta]).to be_a Hash
     expect(data[:weather_at_eta].keys.count).to eq(3)
-    expect(data[:weather_at_eta][:datetime]).be_a String
-    expect(data[:weather_at_eta][:temperature]).be_a Float
-    expect(data[:weather_at_eta][:condition]).be_a String
+    expect(data[:weather_at_eta][:datetime]).to be_a String
+    expect(data[:weather_at_eta][:temperature]).to be_a Float
+    expect(data[:weather_at_eta][:condition]).to be_a String
   end
 end

@@ -12,8 +12,18 @@ class WeatherService
 
   def self.get_weather_at_eta(lat, lon, eta)
     response = conn.get("forecast.json?key=#{Rails.application.credentials.weather_api[:key]}&q=#{lat},#{lon}&days=5")
-    hash = JSON.parse(response.body, symbolize_names: true)
-    forecast_cleaner(hash)
+    hash = JSON.parse(response.body, symbolize_names: true)[:forecast][:forecastday]
+    weather_at_eta_cleaner(hash, eta)
+  end
+
+  def self.weather_at_eta_cleaner(daily_hash, eta)
+    day_difference = (eta.to_date - Date.today).to_i
+    eta_weather = daily_hash[day_difference][:hour][eta.hour]
+    {
+      datetime: eta_weather[:time],
+      temperature: eta_weather[:temp_f],
+      condition: eta_weather[:condition][:text]
+    }
   end
 
   def self.forecast_cleaner(full_hash)
