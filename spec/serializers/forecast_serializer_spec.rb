@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe ForecastSerializer do
   it 'can make a json style hash given a forecast object', :vcr do
     forecast = ForecastFacade.get_forecast("houston,tx")
-    forecast_json_hash = ForecastSerializer.new(forecast)
+    forecast_json_hash = ForecastSerializer.new(forecast).to_hash
 
     expect(forecast_json_hash).to be_a Hash
     expect(forecast_json_hash[:data]).to be_a Hash
     expect(forecast_json_hash[:data][:id]).to be nil
-    expect(forecast_json_hash[:data][:type]).to eq("forecast")
+    expect(forecast_json_hash[:data][:type].to_s).to eq("forecast")
     data = forecast_json_hash[:data][:attributes]
     expect(data).to be_a Hash
 

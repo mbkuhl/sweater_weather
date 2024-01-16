@@ -64,4 +64,14 @@ RSpec.describe 'API call' do
       expect(hour[:icon]).to be_a String
     end
   end
+
+  it 'gets weather at eta given location eta', :vcr do
+    weather_data = WeatherService.get_weather_at_eta(29.76078, 95.36952, DateTime.now + 10000.seconds)
+
+    expect(weather_data).to be_a Hash
+    expect(weather_data.keys.count).to eq(3)
+    expect(weather_data[:datetime]).to be_a String
+    expect(weather_data[:temperature]).to be_a Float
+    expect(weather_data[:condition]).to be_a String
+  end
 end
