@@ -15,8 +15,8 @@ class RoadTripFacade
 
   def self.aggregate_data(weather_data, origin, destination, travel_time)
     {
-      start_city: origin.gsub(",", ", "),
-      end_city: destination.gsub(",", ", "),
+      start_city: origin.gsub(",", ", ").gsub("  ", " "),
+      end_city: destination.gsub(",", ", ").gsub("  ", " "),
       travel_time: travel_time[:formatted_time],
       weather_at_eta: weather_data
     }
