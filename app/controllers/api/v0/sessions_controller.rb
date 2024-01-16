@@ -8,10 +8,4 @@ class Api::V0::SessionsController < ApplicationController
       render json: ErrorSerializer.new(ErrorMessage.new("Email and/or password are incorrect", 401)).error_json, status: :unauthorized
     end
   end
-
-  private
-
-  def user_params
-    params.permit(:email, :password)
-  end
 end

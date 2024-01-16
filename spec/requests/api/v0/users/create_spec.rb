@@ -79,6 +79,6 @@ RSpec.describe "Users Create" do
     errors = json_response[:errors]
     expect(errors).to be_a Array
     expect(errors.first).to be_a Hash
-    expect(errors.first[:detail]).to eq("Validation failed: Password confirmation doesn't match Password")
+    expect(errors.first[:detail]).to eq("Validation failed: Password confirmation can't be blank")
   end
 end
