@@ -79,7 +79,7 @@ Rails 7.1.2
     ```
 ### Endpoints
 
-  1. ```get api/v0/forecast```
+  1. ```GET api/v0/forecast```
 
 Call API using query param location to retrieve various weather stats of that area for the next 5 days. Ex:
 
@@ -87,7 +87,7 @@ Call API using query param location to retrieve various weather stats of that ar
 post http://localhost:3000/api/v0/forecast?location=houston,tx 
 ```
 
-  2. ```post api/v0/users ```
+  2. ```POST api/v0/users ```
 
 Call API using JSON payload in body to send password, email, and password confirmation. API key will be generated and returned. Ex:
 
@@ -104,7 +104,7 @@ Body
 }
 ```
 
-  3. ```post api/v0/sessions ```
+  3. ```POST api/v0/sessions ```
 
    Call API using JSON payload in body to send email and password. User email and API key will be returned. Ex:
 
@@ -120,7 +120,7 @@ Body
 }
 ```
 
-  4. ```post api/v0/road_trip```
+  4. ```POST api/v0/road_trip```
 
      Call API using JSON payload in body to send API key, origin, and destination. Travel time and weather at the destination at the time of ETA will be returned. Ex:
 
