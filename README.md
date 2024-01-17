@@ -2,7 +2,6 @@
 
 ## Project Learning Goals
 
- - Learning Goals
  - Expose an API that aggregates data from multiple external APIs
  - Expose an API that requires an authentication token
  - Expose an API for CRUD functionality
