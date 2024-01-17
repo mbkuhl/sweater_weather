@@ -84,7 +84,7 @@ Rails 7.1.2
 Call API using query param location to retrieve various weather stats of that area for the next 5 days. Ex:
 
 ```ruby
-post http://localhost:3000/api/v0/forecast?location=houston,tx 
+GET http://localhost:3000/api/v0/forecast?location=houston,tx 
 ```
 
   2. ```POST api/v0/users ```
@@ -92,7 +92,7 @@ post http://localhost:3000/api/v0/forecast?location=houston,tx
 Call API using JSON payload in body to send password, email, and password confirmation. API key will be generated and returned. Ex:
 
 ```ruby
-post http://localhost:3000/api/v0/users
+POST http://localhost:3000/api/v0/users
 ```
 
 Body
@@ -109,7 +109,7 @@ Body
    Call API using JSON payload in body to send email and password. User email and API key will be returned. Ex:
 
 ```ruby
-post http://localhost:3000/api/v0/sessions
+POST http://localhost:3000/api/v0/sessions
 ```
 
 Body
@@ -125,7 +125,7 @@ Body
      Call API using JSON payload in body to send API key, origin, and destination. Travel time and weather at the destination at the time of ETA will be returned. Ex:
 
 ```ruby
-post http://localhost:3000/api/v0/road_trip
+POST http://localhost:3000/api/v0/road_trip
 ```
 
 Body
